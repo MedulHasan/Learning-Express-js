@@ -1,0 +1,23 @@
+<%- include('../partials/head') %> 
+    <%- include('../partials/nav') %> 
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, eveniet?</p>
+
+    <% if(post.x) { %>
+        <h1><%= post.name %> </h1>
+        <h2><%= post.email %> </h2>
+    <% } else { %>
+        <h3>post is Not define</h3>
+    <% } %>  
+
+    <ul>
+        <% if(posts.length > 0) { %>
+            <% for(let i of posts) { %>
+                <li>
+                    <h1><%= i.title %> by <%= i.author %>  </h1>
+                </li>
+            <% } %> 
+        <% } else { %>
+            <h1>There is no posts</h1>
+        <% } %>    
+    </ul>
+    <%- include('../partials/foot') %> 
